@@ -4,13 +4,14 @@ import jdk.dynalink.beans.StaticClass;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class InventoryManager{
     // HashMap to store the inventory. Key: productId, Value: Product object
     private Map<String, Product> inventory;
 
     public InventoryManager() {
-        this.inventory = new HashMap<>();
+        this.inventory = new ConcurrentHashMap<>();
     }
     //add products
     public void addProduct(Product product){
