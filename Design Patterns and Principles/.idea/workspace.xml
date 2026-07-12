@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87e14355-e210-44b4-baf2-eb2978a914a8" name="Changes" comment="" />
+    <list default="true" id="87e14355-e210-44b4-baf2-eb2978a914a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../SQL exercise/Exercise 2/Scenario2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL exercise/Exercise 2/Scenario2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL exercise/Exercise 3/Scenario1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL exercise/Exercise 3/Scenario1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL exercise/Exercise 3/Scenario2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL exercise/Exercise 3/Scenario2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL exercise/Exercise 3/Scenario3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL exercise/Exercise 3/Scenario3.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

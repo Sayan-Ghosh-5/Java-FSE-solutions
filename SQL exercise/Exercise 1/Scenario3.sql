@@ -1,7 +1,6 @@
 SET SERVEROUTPUT ON;
 
 DECLARE
-    -- Cursor: loans due within next 30 days (excluding past-due)
     CURSOR c_due_loans IS
         SELECT c.Name, c.CustomerID, l.LoanID, l.DueDate, l.InterestRate,
                TRUNC(l.DueDate - SYSDATE) AS DaysUntilDue

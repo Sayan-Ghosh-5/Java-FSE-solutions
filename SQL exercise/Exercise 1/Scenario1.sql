@@ -1,7 +1,6 @@
 SET SERVEROUTPUT ON;
 
 DECLARE
-    -- Cursor to fetch customer and their loan info
     CURSOR c_senior_loans IS
         SELECT c.CustomerID, c.Name, c.DOB, l.LoanID, l.InterestRate
         FROM Customers c
@@ -12,14 +11,10 @@ DECLARE
     v_discount_cnt NUMBER := 0;
 BEGIN
     FOR rec IN c_senior_loans LOOP
-        -- Calculate age in years
         v_age := FLOOR(MONTHS_BETWEEN(SYSDATE, rec.DOB) / 12);
         
         IF v_age > 60 THEN
-            -- Apply 1% discount (subtract 1 from current rate)
             v_new_rate := rec.InterestRate - 1;
-            
-            -- Guard: Don't allow negative interest rate
             IF v_new_rate < 0 THEN
                 v_new_rate := 0;
             END IF;

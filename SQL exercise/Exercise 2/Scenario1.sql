@@ -8,12 +8,10 @@ CREATE OR REPLACE PROCEDURE SafeTransferFunds (
     insufficient_funds EXCEPTION;
     invalid_destination EXCEPTION;
 BEGIN
-    -- 1. Check if source account exists and get balance
     SELECT Balance INTO v_SourceBalance 
     FROM Accounts 
     WHERE AccountID = p_FromAccountID;
     
-    -- 2. Check if destination account exists
     SELECT COUNT(*) INTO v_DestExists 
     FROM Accounts 
     WHERE AccountID = p_ToAccountID;
@@ -22,12 +20,10 @@ BEGIN
         RAISE invalid_destination;
     END IF;
 
-    -- 3. Check for sufficient funds
     IF v_SourceBalance < p_Amount THEN
         RAISE insufficient_funds;
     END IF;
 
-    -- 4. Perform the transfer
     UPDATE Accounts 
     SET Balance = Balance - p_Amount 
     WHERE AccountID = p_FromAccountID;
@@ -36,7 +32,6 @@ BEGIN
     SET Balance = Balance + p_Amount 
     WHERE AccountID = p_ToAccountID;
 
-    -- 5. Commit the changes if everything is successful
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('Transfer of $' || p_Amount || ' completed successfully.');
 

@@ -4,12 +4,10 @@ CREATE OR REPLACE PROCEDURE UpdateSalary (
 ) AS
     employee_not_found EXCEPTION;
 BEGIN
-    -- Attempt to update the salary
     UPDATE Employees
     SET Salary = Salary + (Salary * (p_Percentage / 100))
     WHERE EmployeeID = p_EmployeeID;
 
-    -- Check if any row was actually modified
     IF SQL%ROWCOUNT = 0 THEN
         RAISE employee_not_found;
     END IF;

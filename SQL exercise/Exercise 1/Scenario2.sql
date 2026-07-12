@@ -2,11 +2,10 @@
 SET SERVEROUTPUT ON;
 
 DECLARE
-    -- Cursor for VIP candidates
     CURSOR c_vip_check IS
         SELECT CustomerID, Name, Balance, IsVIP
         FROM Customers
-        FOR UPDATE;  -- Lock rows for safe update
+        FOR UPDATE;  
     
     v_promoted_cnt NUMBER := 0;
     v_already_vip  NUMBER := 0;

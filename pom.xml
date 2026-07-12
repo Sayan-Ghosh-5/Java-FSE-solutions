@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>java-fse-solution</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>DataStructuresAndAlgorithms/Exercise2</module>
+        <module>DataStructuresAndAlgorithms/Exercise7</module>
+        <module>DesignPatternAndPrinciples/Exercise1</module>
+        <module>DesignPatternAndPrinciples/Exercise2</module>
+        <module>JUnit/Exercise1</module>
+        <module>JUnit/Exercise3</module>
+        <module>JUnit/Exercise4</module>
+        <module>Logging/Exercise1</module>
+        <module>Mockito/Exercise1</module>
+        <module>Mockito/Exercise2</module>
+        <module>Spring_Core_Maven/Exercise1</module>
+        <module>Spring_Core_Maven/Exercise2</module>
+        <module>Spring_Core_Maven/Exercise4</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>

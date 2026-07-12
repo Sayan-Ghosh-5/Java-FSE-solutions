@@ -4,7 +4,6 @@ CREATE OR REPLACE PROCEDURE UpdateEmployeeBonus (
 ) AS
     v_RowsUpdated NUMBER;
 BEGIN
-    -- Apply the bonus percentage to the specified department
     UPDATE Employees
     SET Salary = Salary + (Salary * (p_BonusPct / 100))
     WHERE UPPER(Department) = UPPER(p_Department);
