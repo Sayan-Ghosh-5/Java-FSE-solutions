@@ -21,7 +21,6 @@ BEGIN
                              ' | Amount: $' || v_row.Amount);
     END LOOP;
     
-    -- 6. Close the cursor
     CLOSE GenerateMonthlyStatements;
 END;
 /
