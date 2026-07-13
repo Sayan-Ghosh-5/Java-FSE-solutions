@@ -22,6 +22,11 @@
         <module>Spring_Core_Maven/Exercise1</module>
         <module>Spring_Core_Maven/Exercise2</module>
         <module>Spring_Core_Maven/Exercise4</module>
+        <module>SpringDataJpa/Exercise1</module>
+        <module>SpringRest/Exercise_JWT</module>
+        <module>SpringRest/spring-learn</module>
+        <module>microservices/account</module>
+        <module>microservices/loan</module>
     </modules>
 
     <properties>
