@@ -1,0 +1,16 @@
+.container{
+    margin:30px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.officeCard{
+    margin-bottom:40px;
+}
+
+.textRed{
+    color:red;
+}
+
+.textGreen{
+    color:green;
+}
